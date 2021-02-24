@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Base Part 3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="item">
+    <img src="images/Icon-Python.png" alt="Python Logo" title="Логотип Python" align="right">
+    <h1 id="pageName">HOW-TO: Программа на Python, Часть 3</h1>
+    <ul>
+        <li><a href="basePart1.html"><i>Программа на Python — часть 1</i></a></li>
+        <li><a href="basePart2.html"><i>Программа на Python — часть 2</i></a></li>
+        <li><a href="#pageName"><i>Программа на Python — часть 3</i></a></li>
+    </ul>
+    <h2 id="contents">Содержание</h2>
+    <h3>HOW-TO: Программа на Python, Часть 3</h3>
+    <ul>
+        <li><a href="#moduleChapter">Модули</a></li>
+        <li><a href="#functionsChapter">Функции</a></li>
+    </ul>
+    <hr size="2" noshade>
+    <p>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и присвоение, операторы <b>if</b> и <b>while</b>. Я обещал, что в этой части мы 
+    изучим модули и функции. Давайте начнём.</p>              
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-6 col-md-6">
+                <div class="item">
+    <h2 id="moduleChapter">Модули</h2>
+    <a href="#contents">К содержанию</a>
+    <p>Модули предлагают способ расширить программирование на Python. Вы можете создать свои модули, использовать те, которые поставляются с Python или которые написали
+    другие. В самом Python есть сотни модулей, которые облегчают написание программ. Список модулей, поставляемых с Python, находится по адресу: 
+    <a href="https://docs.python.org/3/py-modindex.html" target="_blank"><i>http://docs.python.org/modindex.html</i></a>. Некоторые модули предназначены для определённых операционных 
+    систем, но большинство из них кроссплатформенные и работают одинаково на <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux</a>, 
+    <a href="https://en.wikipedia.org/wiki/MacOS" target="_blank">Mac</a> и <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Microsoft Windows</a>. Для 
+    использования внешнего модуля необходимо импортировать его в программу. Один из модулей, поставляемых с Python, называется «random». Он даёт возможность генерировать 
+    псевдослучайные числа. Мы используем этот модуль в нашем первом примере.</p>
+    <br>
+    <code><pre>
+#=======================================
+# random_example.py
+# Module example using the random module
+#=======================================
+import random
+# print 14 random integers
+for cntr in range(1,15):
+    print random.randint(1,10) </pre></code>
+    <p>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать 
+    модуль «random». Мы должны явно указать Python на это.</p>               
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-6 col-md-6">
+                <div class="item">
+    <h2 id="functionsChapter">Функции</h2>
+    <a href="#contents">К содержанию</a>
+    <p>Когда мы импортировали модуль random, мы использовали функцию <strong>randint()</strong>. Функция — это блок кода, который создан для того, чтобы вызывать его в программе, 
+    обычно, более одного раза. Это упрощает работу над программой и предотвращает набор одного и того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код 
+    больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа, 
+    сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов 
+    чисел. Тогда наш пример будет выглядеть как код ниже.</p>
+    <code><pre>
+#silly example
+print '%d + %d = %d ' % (1,2,1+2)
+print '%d * %d = %d ' % (1,2,1*2)
+print '%d - %d = %d ' % (1,2,1-2)
+
+print '\n'
+print '%d + %d = %d ' % (1,4,1+4)
+print '%d * %d = %d ' % (1,4,1*4)
+print '%d - %d = %d ' % (1,4,1-4)
+
+print '\n'
+print '%d + %d = %d ' % (10,5,10+5)
+print '%d * %d = %d ' % (10,5,10*5)
+print '%d - %d = %d ' % (10,5,10-5)
+print '\n'</pre></code>
+    <p>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую 
+    назовём <i><b>«DoTwo»</b></i>. Она будет каждый раз брать два числа, проводить математические операции и выводить результат. Начнём с ключевого слова <i><b>«def»</b></i>, 
+    которое сигнализирует о том, что мы собираемся определить функцию. После слова <i><b>«def»</b></i> добавим название функции и список параметров, если таковые имеются, в 
+    круглых скобках. Эту строку необходимо завершить двоеточием. Код функции набирается с отступом. Наш улучшенный простой пример (<u>№2</u>) показан ниже.</p>
+    <br>
+    <code><pre>
+#silly example 2...still silly, but better
+def DoTwo(num1,num2):
+       print '%d + %d = %d ' % (num1,num2,num1+num2)
+       print '%d * %d = %d ' % (num1,num2,num1*num2)
+       print '%d - %d = %d ' % (num1,num2,num1-num2)
+       print '\n'
+DoTwo(1,2)
+DoTwo(1,4)
+DoTwo(10,5) </pre></code>
+    <p>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что-либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей программы. 
+    Чтобы вызвать функцию, нужно написать её имя и параметры.</p>               
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="item">
+    <table  width="100%" border="0" align="center">
+        <col width="33.3%"><col width="33.3%"><col width="33.3%">
+        <tr>
+            <td align="left">
+                <a href="basePart2.html">
+                <img src="images/prev.png" alt="Previous page" title="Предыдущая страница">
+                </a>
+            </td>
+            <td align="center">
+                <a href="#pageName">
+                <img src="images/home.png" alt="Home" title="К содержанию">
+                </a>
+            </td>
+            <td align="right">
+                <a href="">
+                <img src="images/next.png" alt="Next page" title="Следующая страница">
+                </a>
+            </td>
+        </tr>
+    </table>              
+                </div>
+            </div>         
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>   
+</body>
+</html>

@@ -1,0 +1,31 @@
+table {
+    border: 1px solid black;
+    counter-reset: list 65;
+}
+tr td {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+td {
+    text-align: center;
+    font-weight: bold;
+    font-size: 70px;
+}
+table tr {
+    height: 100px;
+}
+table tr:nth-child(even) td:nth-child(odd) {
+    background: black;
+    color: white;
+}
+table tr:nth-child(odd) td:nth-child(even) {
+    background: black;
+    color: white;
+}
+tr > td {
+    counter-increment: list -1;
+}
+td:nth-child(n+1)::before {
+    content: counter(list);
+}

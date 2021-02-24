@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Base Part 2</title>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="item">
+    <img src="images/Icon-Python.png" alt="Python Logo" title="Логотип Python" align="right">
+    <h1 id="pageName">HOW-TO: Программа на Python, Часть 2</h1>
+    <ul>
+        <li><i><a href="basePart1.html">Программа на Python — часть 1</a></i></li>
+        <li><i><a href="#pageName">Программа на Python — часть 2</a></i></li>
+        <li><i><a href="basePart3.html">Программа на Python — часть 3</a></i></li>
+    </ul>
+    <h2 id="contents">Содержание</h2>
+    <h3>HOW-TO: Программа на Python, Часть 2</h3>
+    <ul>
+        <li><a href="#listsChapter">Списки</a></li>
+        <li><a href="#commentsChapter">Комментарии</a></li>
+    </ul>
+    <hr size="2" noshade>
+    <p>Впрошлом уроке мы рассмотрели простую программу, которая использовала raw_input для получения ответа пользователя, простые типы переменных и простой цикл «<b>for</b>». 
+    В этом уроке мы рассмотрим ещё больше типов переменных и напишем ещё больше программ.</p>              
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-6 col-md-6">
+                <div class="item">
+    <h2 id="listsChapter">Списки</h2>
+    <a href="#contents">К содержанию</a>
+    <p>Давайте рассмотрим другой тип переменных, который называется <i>списки</i>. В других языках программирования они называются <i>массивами</i>. Если мы обратимся к аналогии 
+    с коробками для обуви, то массив (список) представляет собой несколько склеенных друг с другом коробок с одинаковыми вещами. Например, в одной коробке лежат вилки, в другой — 
+    ножи, в третьей — ложки. Посмотрим на простой список— список месяцев. Мы запрограммируем его так:</p>
+    <br>
+    <code><pre>
+months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']</pre></code>   
+    <p>Чтобы создать список, мы заключили все значения в квадратные скобки ( <b>'['</b> и <b>']'</b> ). Мы назвали наш список '<i>months</i>'. Чтобы использовать список, мы 
+    дадим команду print <b>months[0]</b> или <b>months[1]</b> (которые выведут на экран '<i>Jan</i>' или '<i>Feb</i>'). Помните: счет начинается с нуля. Чтобы найти длину списка, 
+    можно использовать такую функцию:</p>
+    <code><pre>
+print len(months)</pre></code>
+    <p>которая вернёт 12.</p>
+    <p>Ещё один пример списков — категории в поваренной книге. Например…</p>
+    <br>
+    <code>
+categories = ['Main dish','Meat','Fish','Soup','Cookies']</code>
+    <p>Таким образом, в <b>categories[0]</b> хранится '<i>Main dish</i>', а в <b>categories[4]</b> — '<i>Cookies</i>'. Всё очень просто. Я уверен, вы сможете придумать много других 
+    примеров использования списков.</p>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-6 col-md-6">
+                <div class="item">
+    <h2 id="commentsChapter">Комментарии</h2>
+    <a href="#contents">К содержанию</a>
+    <p>Далее, мы должны обсудить комментарии. Комментарии важны по нескольким причинам. Они не только говорят вам или другим людям, что вы пытаетесь делать, но и напомнят вам через 
+    полгода, что же вы хотели сделать. Когда вы будете писать много программ, комментарии станут важными. Также при их помощи вы заставите Python игнорировать какие-либо части кода. 
+    Чтобы закомментировать строку, поставьте перед ней знак '<i>#</i>'. Например:</p>
+    <code><pre>
+#</pre></code>
+    <p>Это комментарий</p>
+    <p>Комментарии можно вставлять в любое место в строке, но помните, что Python проигнорирует всё, что идёт после '<i>#</i>'.</p>               
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="item">
+    <table  width="100%" border="0" align="center">
+        <col width="33.3%"><col width="33.3%"><col width="33.3%">
+        <tr>
+            <td align="left">
+                <a href="basePart1.html">
+                <img src="images/prev.png" alt="Previous page" title="Предыдущая страница">
+                </a>
+            </td>
+            <td align="center">
+                <a href="#pageName">
+                <img src="images/home.png" alt="Home" title="К содержанию">
+                </a>
+            </td>
+            <td align="right">
+                <a href="basePart3.html">
+                <img src="images/next.png" alt="Next page" title="Следующая страница">
+                </a>
+            </td>
+        </tr>
+    </table>              
+                </div>
+            </div>         
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>    
+</body>
+</html>

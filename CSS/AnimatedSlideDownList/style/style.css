@@ -1,0 +1,43 @@
+.menu {
+    float: left;
+}
+.menu ul li:hover  {
+    background-color: #808080;
+    color: #d3d3d3;
+}
+.menu ul li {
+    width: 100px;
+    border-radius: 5px;
+    background-color: #d3d3d3; 
+    color: #808080;
+    display: table-cell;
+    position: relative;
+    border: solid #000000 1px; 
+    cursor: pointer;
+    z-index: 1;
+}
+.menu ul li ul {
+    max-height:0em;
+    overflow:hidden;
+    position: absolute;
+    transition:max-height .5s ease
+}
+.menu ul li:hover ul {
+    max-height:600px;
+}
+.menu ul li ul li {
+    display: block;
+    line-height: normal;
+    position: relative;
+    margin-left: -40px;
+}
+
+@media all and (max-width: 675px) {
+.menu ul li {
+    display: block;
+}
+.menu ul li ul li {
+    margin-left: 60px;
+}
+
+}
