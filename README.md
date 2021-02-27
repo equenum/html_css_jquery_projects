@@ -1,5 +1,5 @@
 # html_css_projects
-Some of my basic HTML, CSS, and JQuery projects.
+Some basic HTML, CSS, and JQuery projects.
 
 # Description:
 
